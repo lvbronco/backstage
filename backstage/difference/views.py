@@ -1,7 +1,11 @@
 from django.http import JsonResponse
+from django.shortcuts import render
 from datetime import datetime
 import difference.utils.maths as maths
 from .models import DifferenceN, SeqABC
+
+def index(request):
+    return render(request, "build/index.html")
 
 def difference(request):
 	n: int = int(request.GET.get('number')) or 0
