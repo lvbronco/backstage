@@ -1,5 +1,6 @@
 from django.http import HttpResponse, JsonResponse
 from datetime import datetime
+import difference.utils.maths as maths 
 
 def index(request):
 	n = int(request.GET.get('number')) or 0
