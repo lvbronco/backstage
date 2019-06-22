@@ -49,3 +49,20 @@ class MathsTest(TestCase):
 
 		test_diff_zero: int = maths.difference_value(0)
 		self.assertEqual(test_diff_zero, 0)
+
+	def test_order_values(self):
+		test_tup = maths.order_values((0,1))
+		self.assertEqual(test_tup, (0,1))
+
+		test_tup = maths.order_values((1,0))
+		self.assertEqual(test_tup, (0,1))
+
+	def test_pythagorean_triples(self):
+		test_abc = maths.pythagorean_triples(3,4,5)
+		self.assertEqual(test_abc, True)
+
+		test_abc = maths.pythagorean_triples(12,5,13)
+		self.assertEqual(test_abc, True)
+
+		test_abc = maths.pythagorean_triples(4,4,5)
+		self.assertEqual(test_abc, False)
